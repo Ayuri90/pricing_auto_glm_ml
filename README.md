@@ -1,4 +1,4 @@
-# Tarification automobile — Prime pure par GLM & Machine Learning
+# Tarification automobile Prime pure par GLM & Machine Learning
 
 Construction complète d'un tarif de **prime pure** en assurance automobile (responsabilité civile) sur le portefeuille français **freMTPL** : décomposition fréquence × sévérité par GLM, traitement actuariel des sinistres graves (écrêtement + chargement), puis confrontation à deux approches de machine learning (LightGBM fréquence × sévérité, et modèle Tweedie direct) soumises aux mêmes contraintes actuarielles.
 
@@ -19,9 +19,9 @@ Comparaison des quatre tarifs sur le jeu de test (82 634 polices jamais vues) :
 
 Trois enseignements :
 
-1. **Le GLM tient tête au machine learning** — meilleur pouvoir de segmentation (Gini), équilibre garanti par construction, interprétabilité totale. Sur un portefeuille de sept variables aux effets essentiellement additifs, le boosting trouve peu d'interactions à exploiter.
-2. **La sévérité est quasi non segmentable** — l'early stopping du modèle de sévérité s'arrête après 3 arbres : au-delà de sa moyenne, presque rien n'est généralisable. La segmentation vient de la fréquence.
-3. **L'exposition est partiellement endogène au sinistre** (une police résiliée après sinistre cumule exposition courte *et* sinistre) — biais structurel du jeu de données, visible dans le premier décile des tables de lift de tous les modèles.
+1. **Le GLM tient tête au machine learning** : meilleur pouvoir de segmentation (Gini), équilibre garanti par construction, interprétabilité totale. Sur un portefeuille de sept variables aux effets essentiellement additifs, le boosting trouve peu d'interactions à exploiter.
+2. **La sévérité est quasi non segmentable** : l'early stopping du modèle de sévérité s'arrête après 3 arbres : au-delà de sa moyenne, presque rien n'est généralisable. La segmentation vient de la fréquence.
+3. **L'exposition est partiellement endogène au sinistre** (une police résiliée après sinistre cumule exposition courte *et* sinistre) : biais structurel du jeu de données, visible dans le premier décile des tables de lift de tous les modèles.
 
 ---
 
@@ -35,14 +35,14 @@ Les dix anciennes régions sont regroupées en quatre zones tarifaires sur un **
 
 ### Sinistres graves : écrêtement + chargement à reconstruction exacte
 
-Le GLM Gamma attritionnel est ajusté sur la sévérité **écrêtée** au quantile 99.5 % (M1 = 40 107 €), et l'excédent des graves est mutualisé via un chargement par sinistre :
+Le GLM Gamma attritionnel est ajusté sur la sévérité **écrêtée** au quantile 99,5 % (M1 = 40 107 €), et l'excédent des graves est mutualisé via un chargement par sinistre :
 
 ```
 chargement = P(atypique) × E[excédent | atypique]
            = (n_polices_atypiques / n_sinistres) × 108 716 €  =  523.93 €
 ```
 
-La convention garantit que la somme des chargements reconstruit **exactement** l'excédent écrêté sur le train. Le chargement représente ~24 % de la prime : un quart du tarif couvre un demi-pour-cent des sinistres.
+La convention garantit que la somme des chargements reconstruits **exactement** l'excédent écrêté sur le train. Le chargement représente ~24 % de la prime : un quart du tarif couvre un demi-pour-cent des sinistres.
 
 ### ML sous contraintes actuarielles
 
