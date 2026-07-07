@@ -1,0 +1,59 @@
+\babel@toc {french}{}\relax 
+\contentsline {section}{\numberline {1}Introduction et contexte}{3}{section.1}%
+\contentsline {section}{\numberline {2}Données}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Description du portefeuille}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Qualité des données et retraitements}{3}{subsection.2.2}%
+\contentsline {paragraph}{Écrêtement de l'exposition.}{3}{section*.3}%
+\contentsline {paragraph}{Agrégation des sinistres par police.}{4}{section*.4}%
+\contentsline {subsection}{\numberline {2.3}Analyse exploratoire}{4}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Méthodologie générale}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Décomposition fréquence \texttimes {} sévérité}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Modèles linéaires généralisés}{5}{subsection.3.2}%
+\contentsline {paragraph}{Fréquence : Poisson avec offset.}{5}{section*.6}%
+\contentsline {paragraph}{Sévérité : Gamma avec lien log et pondération.}{5}{section*.7}%
+\contentsline {paragraph}{Multiplicativité du tarif.}{5}{section*.8}%
+\contentsline {subsection}{\numberline {3.3}Protocole de validation}{5}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Préparation des variables tarifaires}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Regroupement des modalités}{5}{subsection.4.1}%
+\contentsline {paragraph}{Puissance.}{5}{section*.9}%
+\contentsline {paragraph}{Marque.}{5}{section*.10}%
+\contentsline {paragraph}{Région : double critère fréquence + géographie.}{5}{section*.11}%
+\contentsline {subsection}{\numberline {4.2}Discrétisation des variables continues}{6}{subsection.4.2}%
+\contentsline {paragraph}{Pourquoi discrétiser ?}{7}{section*.14}%
+\contentsline {section}{\numberline {5}Modèles GLM : résultats}{7}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Modèle de fréquence}{7}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Modèle de sévérité et sélection de variables}{7}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Prime pure et équilibre global}{7}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Moteur tarifaire : relativités et grille}{8}{section.6}%
+\contentsline {paragraph}{Lecture actuarielle.}{8}{section*.17}%
+\contentsline {section}{\numberline {7}Traitement des sinistres graves}{9}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Problématique}{9}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Choix du seuil}{9}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Calibrage du chargement}{9}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Résultats de la prime à deux composantes}{10}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Approches Machine Learning}{10}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Motivation et principes de rigueur}{10}{subsection.8.1}%
+\contentsline {paragraph}{1. Traitement correct de l'exposition.}{10}{section*.20}%
+\contentsline {paragraph}{2. Early stopping.}{10}{section*.21}%
+\contentsline {paragraph}{3. Écrêtement identique au GLM.}{10}{section*.22}%
+\contentsline {paragraph}{4. Contraintes de monotonie.}{11}{section*.23}%
+\contentsline {subsection}{\numberline {8.2}Recalage global}{11}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Modèle Tweedie direct}{11}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Comparaison des quatre tarifs}{11}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Le choix des métriques}{11}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Résultats}{11}{subsection.9.2}%
+\contentsline {paragraph}{Le GLM tient tête au machine learning.}{12}{section*.26}%
+\contentsline {paragraph}{La sévérité n'est presque pas segmentable.}{12}{section*.27}%
+\contentsline {subsection}{\numberline {9.3}Calibration locale et biais d'exposition}{13}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Interprétabilité des modèles ML}{13}{subsection.9.4}%
+\contentsline {section}{\numberline {10}Forces et limites des approches}{14}{section.10}%
+\contentsline {section}{\numberline {11}Limites et pistes d'amélioration}{15}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Limites identifiées}{15}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Pistes d'amélioration}{15}{subsection.11.2}%
+\contentsline {paragraph}{Court terme (données et modèles existants).}{15}{section*.31}%
+\contentsline {paragraph}{Moyen terme (méthodologie).}{15}{section*.32}%
+\contentsline {paragraph}{Long terme (données).}{15}{section*.33}%
+\contentsline {section}{\numberline {12}Conclusion}{16}{section.12}%
+\contentsline {section}{\numberline {A}Grille tarifaire Puissance \texttimes {} Marque}{17}{appendix.A}%
+\contentsline {section}{\numberline {B}Tables de lift complètes}{17}{appendix.B}%
+\contentsline {section}{\numberline {C}Environnement technique}{17}{appendix.C}%
